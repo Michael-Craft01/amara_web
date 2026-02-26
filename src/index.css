@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--bg-main);
+  --color-foreground: var(--text-main);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--text-muted);
+  --color-border: var(--border-color);
+  
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+:root {
+  /* Strict Black & White Monochromatic Theme as per agent.md */
+  --bg-main: oklch(10% 0 0);          /* Near Black */
+  --bg-100: oklch(15% 0 0);           /* Dark Gray */
+  --bg-200: oklch(20% 0 0);           /* Medium Dark Gray */
+  
+  --text-main: oklch(98% 0 0);        /* White */
+  --text-muted: oklch(70% 0 0);       /* Light Gray */
+  
+  --primary: oklch(95% 0 0);          /* Almost White (Primary Brand) */
+  --primary-foreground: oklch(10% 0 0);/* Black text on primary */
+  
+  --border-color: oklch(25% 0 0);     /* Subtle border */
+  --border-light: oklch(35% 0 0);     /* Light subtle border */
+}
+
+/* Base resets */
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+/* Material Symbols icon class setup */
+.mso {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mso.filled {
+  font-variation-settings: 'FILL' 1;
+}
+
+/* ========================================= */
+/* STRICT UTILITY CLASSES (From agent.md)    */
+/* ========================================= */
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .bg-frosty-glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Buttons */
+  .tw-button {
+    @apply inline-flex items-center justify-center rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .tw-button:hover {
+    opacity: 0.9;
+  }
+  
+  .tw-button-secondary {
+    @apply inline-flex items-center justify-center rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-border focus:ring-offset-2 focus:ring-offset-background;
+    background-color: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .tw-button-secondary:hover {
+    background-color: var(--bg-100);
+  }
+  
+  .tw-button-ghost {
+    @apply inline-flex items-center justify-center rounded-md font-medium transition-colors focus:outline-none;
+    background-color: transparent;
+    color: var(--text-main);
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .tw-button-ghost:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .tw-button-sm {
+    @apply text-sm;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Cards */
+  .tw-card {
+    @apply rounded-xl border p-6;
+    background-color: var(--bg-100);
+    border-color: var(--border-color);
+  }
+}
+
