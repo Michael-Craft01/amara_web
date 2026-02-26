@@ -183,6 +183,22 @@ function App() {
                   </div>
                   <span className="material-symbols-outlined text-white/20 text-[18px] ml-auto group-hover:text-[#25D366]/50 transition-colors">arrow_forward</span>
                 </a>
+
+                <a
+                  href="https://wa.me/263785733582"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-4 p-4 rounded-2xl border border-white/5 hover:border-[#25D366]/40 hover:bg-[#25D366]/8 transition-all duration-200"
+                >
+                  <div className="w-11 h-11 rounded-xl bg-white/8 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-[#25D366]/20 group-hover:border-[#25D366]/40 transition-all">
+                    <span className="material-symbols-outlined text-white/60 text-[20px] group-hover:text-[#25D366] transition-colors">forum</span>
+                  </div>
+                  <div className="min-w-0">
+                    <div className="font-semibold text-white/90 text-sm mb-0.5">WhatsApp</div>
+                    <div className="text-xs text-white/40">+263 785 733 582</div>
+                  </div>
+                  <span className="material-symbols-outlined text-white/20 text-[18px] ml-auto group-hover:text-[#25D366]/50 transition-colors">arrow_forward</span>
+                </a>
               </div>
             </div>
           </div>
